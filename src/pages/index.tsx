@@ -13,17 +13,27 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 24px;
-  margin-top: 50px;
+  font-size: 22px;
+  margin-top: 25px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    margin-top: 50px;
+  }
 `
 
 const Description = styled.p`
-  font-size: 42px;
-  line-height: 50px;
+  font-size: 36px;
+  line-height: 40px;
   max-width: 650px;
 
   & b {
     font-weight: bold;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 42px;
+    line-height: 50px;
   }
 `
 

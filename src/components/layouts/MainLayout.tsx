@@ -15,18 +15,35 @@ const GlobalStyle = createGlobalStyle`
 
 const Grid = styled.div`
   background-color: #0a0d15;
-  display: grid;
-  grid-template-areas: "left-panel right-panel";
-  grid-template-columns: 1fr 40%;
+  box-sizing: border-box;
+  display: flex;
   height: 100vh;
+  padding: 15px;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-areas: "left-panel right-panel";
+    grid-template-columns: 1fr 40%;
+  }
 `
 
 const LeftPanel = styled.div`
   grid-area: left-panel;
+  z-index: 1;
 `
 
 const RightPanel = styled.div`
   grid-area: right-panel;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  @media (min-width: 768px) {
+    position: static;
+  }
 `
 
 const MainLayout = ({

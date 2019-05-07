@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "octupus.tech",
+  "alias": "octupus.tech",
   "builds": [
     {
       "src": "package.json",
